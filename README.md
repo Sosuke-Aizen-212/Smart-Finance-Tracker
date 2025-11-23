@@ -43,6 +43,6 @@ pip install -r requirements.txt
    python finance_tracker.py
 
 4. **Interact**
-   Follow the on-screen menu prompts—type 1 to add income, 3 for a summary, etc.
+5. Follow the on-screen menu prompts—type 1 to add income, 3 for a summary, etc.
 
 
