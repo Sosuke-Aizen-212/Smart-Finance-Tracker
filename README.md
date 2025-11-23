@@ -1,129 +1,68 @@
-# 💰 Smart Finance Tracker (Python CLI)
+# 💰 Smart Finance Tracker (CLI)
 
-A lightweight, interactive command-line application to help users track personal finances by recording income and expenses, viewing summaries, and analyzing spending patterns — all built with core Python concepts.
-
-[![Python](https://img.shields.io/badge/Python-3.6%2B-blue)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
----
-
-## 🎯 Project Overview
-
-This project serves as a practical implementation of fundamental programming concepts learned in an introductory course like **CSE1021: Introduction to Problem Solving and Programming**. It allows users to:
-
-- Log income and expense transactions
-- View real-time financial summaries
-- Analyze spending by category with percentage breakdowns
-- Persist data across sessions using JSON storage
-
-The goal is to reinforce understanding of control structures, data types, functions, and file I/O while building a functional tool.
-
----
+A simple, command-line interface (CLI) personal finance application written in Python. This tracker allows users to log income and expenses, view a financial summary, and save data persistence using JSON files.
 
 ## ✨ Features
 
-✅ **Add Income**  
-Record sources of income (e.g., salary, freelance, gifts) with amount, source, and description.
+* **Transaction Logging:** Easily record new income and expense entries.
+* **Input Validation:** Ensures only positive numerical amounts are accepted for transactions.
+* **Data Persistence:** Saves all transactions to a `finance_data.json` file, so data is retained between sessions.
+* **Financial Summary:** Calculates and displays:
+    * Total Income
+    * Total Expense
+    * Net Balance (color-coded based on positive/negative)
+* **Expense Breakdown:** Provides a detailed, categorized breakdown of all expenses, including the percentage of total expenditure.
+* **Color-Coded Output:** Uses ANSI escape codes for enhanced readability and clear distinction between income (Green) and expenses (Red).
 
-✅ **Add Expense**  
-Log expenses categorized by purpose (e.g., Food, Rent, Transport) for better organization.
-
-✅ **View Summary & Breakdown**  
-- Total Income  
-- Total Expenses  
-- Net Balance (color-coded: green for positive, red for negative)  
-- **Categorical Expense Analysis**: See how much each category contributes to overall spending (in percentages).
-
-✅ **View All Transactions**  
-Display a neatly formatted, color-coded table of all recorded transactions with IDs, types, amounts, categories/sources, and descriptions.
-
-✅ **Auto-Save on Exit**  
-All data is automatically saved to `finance_data.json` when exiting, and reloaded on next startup.
-
-✅ **User-Friendly CLI Interface**  
-Clean menu navigation with input validation and colorful feedback using ANSI escape codes.
-
----
-
-## 📦 Installation & Setup
+## 🚀 How to Run
 
 ### Prerequisites
-- Python 3.6 or higher
-- No external libraries required (uses only built-in modules: `json`)
 
-### Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/smart-finance-tracker.git
-   cd smart-finance-tracker
-Run the application:
-Bash
+You need **Python 3.x** installed on your system. No external libraries are strictly required, as it only uses the standard `json` module.
 
-python finance_tracker.py
-🔐 Privacy Tip: To avoid committing sensitive financial data, add finance_data.json to your .gitignore file:
+### Execution
 
-gitignore
+1.  **Save the Code:** Save the provided code as a file named `tracker.py` (or similar).
+2.  **Run from Terminal:** Open your terminal or command prompt and navigate to the directory where you saved the file.
+3.  Execute the script:
 
-# .gitignore
+    ```bash
+    python tracker.py
+    ```
+
+## 🛠️ Menu Options
+
+| Option | Action | Description |
+| :---: | :--- | :--- |
+| **1** | Add Income | Prompts for amount, source, and description. |
+| **2** | Add Expense | Prompts for amount, category, and description. |
+| **3** | View Summary | Shows Total Income, Total Expense, Net Balance, and a categorized Expense Breakdown. |
+| **4** | View All | Lists every recorded transaction with color-coding. |
+| **5** | Save & Exit | Writes all current transactions to `finance_data.json` and closes the application. |
+
+## 📁 File Structure
+
+The project primarily consists of two files that will be managed:
+
+| File Name | Purpose | Notes |
+| :--- | :--- | :--- |
+| `tracker.py` | The main application code containing all functions and the execution loop. | **Source Code** (Should be committed) |
+| `finance_data.json` | Stores the user's transaction data (initially empty). | **Data File** (Can be ignored in Git) |
+
+***
+
+## 🚫 Suggested .gitignore
+
+Since the `finance_data.json` file contains user-specific data that may change frequently and isn't part of the core source code, it's best to exclude it from Git tracking.
+
+Create a file named **`.gitignore`** in your project's root directory with the following content:
+
+```gitignore
+# Data file (since it changes per user/session)
 finance_data.json
-🖥️ How to Use
-Upon launching, you'll see the main menu:
 
-text
-
-==============================
-  SMART FINANCE TRACKER MENU
-==============================
-1. Add Income
-2. Add Expense
-3. View Summary & Breakdown
-4. View All Transactions
-5. Save & Exit
-==============================
-Enter your choice (1-5):
-Step-by-Step Guide
-1. Add Income
-Select option 1
-Enter amount (must be positive number)
-Enter description (e.g., "Freelance project")
-Enter source (e.g., "Salary", "Gift")
-2. Add Expense
-Select option 2
-Enter amount (positive number)
-Enter description (e.g., "Dinner at restaurant")
-Enter category (e.g., "Food", "Transport", "Entertainment")
-3. View Summary & Breakdown
-Displays:
-
-Total Income
-Total Expenses
-Net Balance (Income - Expenses)
-Expense Breakdown by Category with percentages:
-text
-
-Expense Breakdown by Category:
-- Food       :    50.00 (50.0%)
-- Transport  :    30.00 (30.0%)
-- Entertainment: 20.00 (20.0%)
-4. View All Transactions
-Shows a tabular list of all transactions with color coding:
-
-🟢 Green: Income entries
-🔴 Red: Expense entries
-Example output:
-
-text
-
-ID  | Type     |     Amount | Category/Source  | Description
---------------------------------------------------
-1   | INCOME   |    3000.00 | Salary           | Monthly paycheck
-2   | EXPENSE  |      50.00 | Food             | Groceries from Walmart
-5. Save & Exit
-Saves current transaction data to finance_data.json and exits the program cleanly.Function/Variable,Description,Python Concepts Demonstrated
-TRANSACTIONS,Global list holding transaction dictionaries.,"Global Variable, Lists"
-load_data(),Reads the TRANSACTIONS list from a JSON file.,"File I/O (try/except), JSON module"
-save_data(),Writes the TRANSACTIONS list to a JSON file.,"File I/O (with open), JSON module"
-add_transaction(type),"Prompts the user for details (amount, description, category) and appends a new transaction dictionary to TRANSACTIONS.","Functions, Input/Output, while loop (input validation), Dictionaries, Conditional Logic"
-view_summary(),Iterates through TRANSACTIONS to calculate totals and category-wise expenses.,"Iteration (for loop), Summation, Dictionaries (for grouping/counting), Conditional Logic"
-display_all_transactions(),Lists all transactions using enumerate for numbering and string formatting for alignment.,"List Iteration (for i, t in enumerate), String Formatting"
-main_menu(),"The main control loop that displays the menu, takes user input, and calls the appropriate function.","Control Flow (while True, if/elif/else), Function Calls"
+# Environment/Build files
+__pycache__/
+*.pyc
+venv/
+.venv/
