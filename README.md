@@ -44,6 +44,7 @@ pip install -r requirements.txt
    ```
 
 4. **Interact**
+ 
    Follow the on-screen menu prompts—
    Type 1 to add income
    Type 2 to add expense
@@ -54,8 +55,8 @@ pip install -r requirements.txt
 
 ## OUTPUT
 
-**This code provides:**
-   -Full datasheet for Personal Finance
+   **This code provides:**
+     -Full datasheet for Personal Finance
 
 
 
