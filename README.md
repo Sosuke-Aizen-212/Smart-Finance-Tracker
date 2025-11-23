@@ -29,7 +29,7 @@ The application provides the following core functionalities through an interacti
 pip install -r requirements.txt
 ```
 
-## 🚀 How to Run
+## How to Run
 
 1. **Prerequisite**  
    Make sure Python 3.6+ is installed on your machine.
@@ -44,5 +44,12 @@ pip install -r requirements.txt
 
 4. **Interact**
  Follow the on-screen menu prompts—type 1 to add income, 3 for a summary, etc.
+
+## OUTPUT
+
+This code provides:
+-Full datasheet of Personal Finance
+
+
 
 
