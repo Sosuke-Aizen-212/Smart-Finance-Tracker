@@ -44,12 +44,12 @@ pip install -r requirements.txt
    ```
 
 4. **Interact**<br>
-   Follow the on-screen menu prompts—
-     Type 1 to add income
-     Type 2 to add expense
-     Type 3 for a summary&breakdown
-     Type 4 to View All Transactions
-     Type 5 to Save & Exit
+   Follow the on-screen menu prompts—<br>
+     Type 1 to add income<br>
+     Type 2 to add expense<br>
+     Type 3 for a summary&breakdown<br>
+     Type 4 to View All Transactions<br>
+     Type 5 to Save & Exit<br>
      Type 6 to Export Summary to New CSV
 
 
