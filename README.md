@@ -1,68 +1,48 @@
-# 💰 Smart Finance Tracker (CLI)
+# [cite_start]Smart Finance Tracker (Python CLI Application) 
 
-A simple, command-line interface (CLI) personal finance application written in Python. This tracker allows users to log income and expenses, view a financial summary, and save data persistence using JSON files.
+## [cite_start]🎯 Project Overview [cite: 2]
 
-## ✨ Features
+[cite_start]This is a simple, command-line interface (CLI) application developed in Python to help users track their personal income and expenses[cite: 3]. [cite_start]It provides a quick way to record financial transactions, view a comprehensive summary, and analyze spending patterns by category[cite: 4].
 
-* **Transaction Logging:** Easily record new income and expense entries.
-* **Input Validation:** Ensures only positive numerical amounts are accepted for transactions.
-* **Data Persistence:** Saves all transactions to a `finance_data.json` file, so data is retained between sessions.
-* **Financial Summary:** Calculates and displays:
-    * Total Income
-    * Total Expense
-    * Net Balance (color-coded based on positive/negative)
-* **Expense Breakdown:** Provides a detailed, categorized breakdown of all expenses, including the percentage of total expenditure.
-* **Color-Coded Output:** Uses ANSI escape codes for enhanced readability and clear distinction between income (Green) and expenses (Red).
+[cite_start]The project is designed to demonstrate proficiency in fundamental Python programming concepts, particularly those covered in an introductory course like **CSE1021: Introduction to Problem Solving and Programming**[cite: 5].
 
-## 🚀 How to Run
+---
 
-### Prerequisites
+## [cite_start]✨ Features [cite: 6]
 
-You need **Python 3.x** installed on your system. No external libraries are strictly required, as it only uses the standard `json` module.
+[cite_start]The application provides the following core functionalities through an interactive menu[cite: 7]:
 
-### Execution
+* [cite_start]**Add Income**: Record a new income transaction with amount, source, and description[cite: 8].
+* [cite_start]**Add Expense**: Record a new expense transaction with amount, category, and description[cite: 9].
+* [cite_start]**View Summary & Breakdown**: [cite: 10]
+    * [cite_start]Displays **Total Income**, **Total Expense**, and **Net Balance**[cite: 11].
+    * [cite_start]Provides a **Categorical Breakdown** of expenses, including the percentage each category contributes to the total spending, offering a basic form of financial analysis[cite: 12].
+* [cite_start]**View All Transactions**: Lists all recorded transactions with clear, color-coded formatting for easy readability[cite: 13].
+* [cite_start]**Save & Exit**: Automatically saves all transaction data to a local `finance_data.json` file before exiting, ensuring data persistence[cite: 14].
 
-1.  **Save the Code:** Save the provided code as a file named `tracker.py` (or similar).
-2.  **Run from Terminal:** Open your terminal or command prompt and navigate to the directory where you saved the file.
-3.  Execute the script:
+---
 
+## [cite_start]💻 How to Run [cite: 15]
+
+1.  [cite_start]**Prerequisite**: Ensure you have Python installed on your system (**Python 3.6+ is recommended**)[cite: 16].
+2.  [cite_start]**Save the File**: Save the provided code as `finance_tracker.py`[cite: 17].
+3.  **Execute**: Open your terminal or command prompt, navigate to the directory where you saved the file, and run:
     ```bash
-    python tracker.py
-    ```
+    python finance_tracker.py
+    ``` [cite: 18]
+4.  **Interact**: Follow the on-screen menu instructions (e.g., enter `1` for Add Income, `3` for Summary, etc.)[cite: 19].
 
-## 🛠️ Menu Options
+---
 
-| Option | Action | Description |
-| :---: | :--- | :--- |
-| **1** | Add Income | Prompts for amount, source, and description. |
-| **2** | Add Expense | Prompts for amount, category, and description. |
-| **3** | View Summary | Shows Total Income, Total Expense, Net Balance, and a categorized Expense Breakdown. |
-| **4** | View All | Lists every recorded transaction with color-coding. |
-| **5** | Save & Exit | Writes all current transactions to `finance_data.json` and closes the application. |
+## [cite_start]🎓 Educational Concepts Demonstrated [cite: 20]
 
-## 📁 File Structure
+[cite_start]This project successfully integrates several key programming concepts from the course curriculum[cite: 21]:
 
-The project primarily consists of two files that will be managed:
-
-| File Name | Purpose | Notes |
-| :--- | :--- | :--- |
-| `tracker.py` | The main application code containing all functions and the execution loop. | **Source Code** (Should be committed) |
-| `finance_data.json` | Stores the user's transaction data (initially empty). | **Data File** (Can be ignored in Git) |
-
-***
-
-## 🚫 Suggested .gitignore
-
-Since the `finance_data.json` file contains user-specific data that may change frequently and isn't part of the core source code, it's best to exclude it from Git tracking.
-
-Create a file named **`.gitignore`** in your project's root directory with the following content:
-
-```gitignore
-# Data file (since it changes per user/session)
-finance_data.json
-
-# Environment/Build files
-__pycache__/
-*.pyc
-venv/
-.venv/
+| Course Concept (Unit/Experiment) | Implementation in Tracker |
+| :--- | :--- |
+| **Lists and Dictionaries** (Unit 5) | Used the `TRANSACTIONS` **List** to hold all records, and each record is stored as a **Dictionary**. Dictionaries are also used for `category_totals` in the summary. |
+| **Input and Output** (Exp. 2) | Used `input()` to receive transaction details and `print()` with ANSI color codes for enhanced, readable output. |
+| **Functions** (Unit 2) | Modularized the code using functions like `add_transaction()`, `view_summary()`, `load_data()`, and `save_data()`. |
+| **Control Flow (if/else, while)** (Unit 3, Exp. 4) | The `main_menu()` uses a `while True` loop and `if-elif-else` statements to control the application flow based on user choice. |
+| **Summation** (Unit 3) | Implemented summation logic within `view_summary()` to calculate `total_income`, `total_expense`, and `balance`. |
+| **Data Persistence** | Used the standard `json` library to save and load data, preventing data loss between sessions. |
