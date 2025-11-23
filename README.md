@@ -43,7 +43,13 @@ pip install -r requirements.txt
    python finance_tracker.py
 
 4. **Interact**
-   Follow the on-screen menu prompts—type 1 to add income, 3 for a summary, etc.
+   Follow the on-screen menu prompts—
+   Type 1 to add income
+   Type 2 to add expense
+   Type 3 for a summary&breakdown
+   Type 4 to View All Transactions
+   Type 5 to Save & Exit
+   Type 6 to Export Summary to New CSV
 
 ## OUTPUT
 
