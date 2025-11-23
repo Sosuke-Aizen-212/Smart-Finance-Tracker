@@ -49,13 +49,13 @@ pip install -r requirements.txt
 
 This project integrates several key programming concepts from the course curriculum:
 
-| Course Concept (Unit/Experiment)        | Implementation in `Tracker`                                                                 |
+| Course Concept         | Implementation in `Tracker`                                                                 |
 |-----------------------------------------|---------------------------------------------------------------------------------------------|
-| Lists and Dictionaries (Unit 5)         | Uses a `TRANSACTIONS` list to store all records, with each record as a dictionary. Dictionaries are also used for `category_totals` in the summary. |
-| Input and Output (Exp. 2)               | Uses `input()` to receive transaction details and `print()` with ANSI color codes for clear, readable console output. |
-| Functions (Unit 2)                      | Breaks logic into reusable functions such as `add_transaction()`, `view_summary()`, `load_data()`, and `save_data()`. |
-| Control Flow (if/else, while) (Unit 3, Exp. 4) | The `main_menu()` function uses a `while True` loop and `if` / `elif` / `else` statements to control the application flow based on user choices. |
-| Summation (Unit 3)                      | Implements summation logic in `view_summary()` to calculate `total_income`, `total_expense`, and `balance`. |
+| Lists and Dictionaries          | Uses a `TRANSACTIONS` list to store all records, with each record as a dictionary. Dictionaries are also used for `category_totals` in the summary. |
+| Input and Output                | Uses `input()` to receive transaction details and `print()` with ANSI color codes for clear, readable console output. |
+| Functions                       | Breaks logic into reusable functions such as `add_transaction()`, `view_summary()`, `load_data()`, and `save_data()`. |
+| Control Flow (if/else, while)  | The `main_menu()` function uses a `while True` loop and `if` / `elif` / `else` statements to control the application flow based on user choices. |
+| Summation                       | Implements summation logic in `view_summary()` to calculate `total_income`, `total_expense`, and `balance`. |
 | Data Persistence                        | Uses Python’s built-in `json` library to save and load transaction data, preserving user data between sessions. |
 
 ## Output
