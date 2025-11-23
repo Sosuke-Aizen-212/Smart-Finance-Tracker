@@ -1,6 +1,6 @@
 # Smart Finance Tracker
 
-This is a simple, command-line interface (CLI) application developed in Python to help users track their personal income and expenses. It provides a quick way to record financial transactions, view a comprehensive summary, and analyse spending patterns by category.
+This is a simple, command-line interface (CLI) application developed in Python to help users track their personal income and expenses. It provides a quick way to record financial transactions, view a comprehensive summary, and analyze spending patterns by category.
 
 # Features
 
@@ -14,7 +14,7 @@ The application provides the following core functionalities through an interacti
   - Displays Total Income, Total Expense, and Net Balance.
   - Provides a Categorical Breakdown of expenses, including the percentage each category contributes to the total spending, offering a basic form of financial analysis.
 
-- **View All Transactions**: Lists all recorded transactions with clear, colour-coded formatting for easy readability.
+- **View All Transactions**: Lists all recorded transactions with clear, color-coded formatting for easy readability.
 
 - **Save & Exit**: Automatically saves all transaction data to a local `summary_report.csv` file before exiting, ensuring data persistence.
 
