@@ -29,7 +29,7 @@ The application provides the following core functionalities through an interacti
 pip install -r requirements.txt
 ```
 
-##  How to Run
+## 🚀 How to Run
 
 1. **Prerequisite**  
    Make sure Python 3.6+ is installed on your machine.
@@ -37,11 +37,12 @@ pip install -r requirements.txt
 2. **Save the File**  
    Drop the code into a file named `finance_tracker.py`.
 
-3. **Execute**
+3. **Execute**  
    Open your terminal, navigate to the folder containing the file, and run:  
    ```bash
    python finance_tracker.py
-   ```
+
 4. **Interact**
    Follow the on-screen menu prompts—type 1 to add income, 3 for a summary, etc.
+
 
