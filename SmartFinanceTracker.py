@@ -3,7 +3,7 @@ import os
 
 TRANSACTIONS = []
 # Primary data file remains CSV
-DATA_FILE = "finance_data.csv" 
+DATA_FILE = "summary_report.csv" 
 FIELDNAMES = ['type', 'amount', 'category', 'description'] 
 
 # --- Color Definitions ---
@@ -237,3 +237,4 @@ def main_menu():
 
 if __name__ == "__main__":
     main_menu()
+
